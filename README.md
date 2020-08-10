@@ -9,7 +9,8 @@ It is a full–duplex interface which means it can send and receive data at the 
 The SPI can have multiple slaves, here it has 3 slaves.
 
 The SPI Module implemented here has a 4x1 mux to choose between the three MISO lines according to the address of the communicating slave,
-        and another one to choose between the three slave_out lines according to the address of the communicating slave .
+        and another one to choose between the three slave_out lines according to the address of the communicating slave.
+This Module deals with 8-bit data
 
 ![img](https://github.com/Passant-Abdelgalil/SPI-Protocol/blob/master/images/350px-SPI_three_slaves.svg.png?raw=true)
 
@@ -32,6 +33,8 @@ The SPI Module implemented here has a 4x1 mux to choose between the three MISO l
 4. The master sends the serial data, one bit at each clock cycle along the MOSI line.
 
 5. If the SPI is working in full duplex, then the master reads the data from the slave along the MISO line.
+
+![transmission](https://github.com/Passant-Abdelgalil/SPI-Protocol/blob/master/images/SPI-Working-Data-Transfer.gif?raw=true)
 
 ### Top Module Inputs:  
 -	**Load**: as explained before, to load data in master.
